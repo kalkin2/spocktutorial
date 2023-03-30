@@ -10,14 +10,12 @@ class ExampleSpecification extends Specification{
         1==1
     }
 
-    def "shoud demonstrate given-when-then"(){
-        given:
-        def polygon = new Polygon(4);
+    def "should demonstrate given-when-then"(){
 
         when:
-        int side1 = polygon.numberOfSides // get 생략 가능
+        int side1 = new Polygon(4).numberOfSides // get 생략 가능
 
-        int side2 = polygon.getNumberOfSides()
+        int side2 = new Polygon(4).getNumberOfSides()
 
         then:
         side1 == 4
