@@ -11,10 +11,9 @@ repositories {
 }
 
 dependencies {
-    testImplementation 'org.apache.groovy:groovy-all:4.0.10'
-    testImplementation 'org.spockframework:spock-core:2.3-groovy-4.0'
-    testImplementation('cglib:cglib-nodep:2.2') // 추가
-
+    testImplementation 'org.codehaus.groovy:groovy-all:3.0.16'
+    testImplementation 'org.spockframework:spock-core:2.3-groovy-3.0'
+    testImplementation 'cglib:cglib-nodep:3.3.0'
 }
 
 test {
