@@ -43,7 +43,7 @@ class ExampleSpecification extends Specification{
         exception.numberOfSides == sides
 
         where:
-        sides << [-1, 0, 3, 1, 2]
+        sides << [-1, 0,  1, 2]
     }
 
     def "Exception test multiple parameter2 with datatable"() {
@@ -61,7 +61,7 @@ class ExampleSpecification extends Specification{
         where:
         a  | b  || max
         1  | 10 || 10
-        7  | 4  || 5
+        7  | 4  || 7
         20 | 0  || 20
     }
 
