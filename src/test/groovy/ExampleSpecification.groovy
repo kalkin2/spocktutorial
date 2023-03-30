@@ -29,6 +29,41 @@ class ExampleSpecification extends Specification{
         then:
         def exception = thrown(TooFewSidesException)
         exception.numberOfSides == 0
+    }
+
+    //중간에 하나가 실패해도 모든 테스트의 실행 결과를 볼 수 있다.
+    def "Exception test multiple parameter with datatable"() {
+        when:
+        new Polygon(sides)
+
+        then:
+        def exception = thrown(TooFewSidesException)
+        exception.numberOfSides == sides
+
+        where:
+        sides << [-1, 0, 3, 1, 2]
+    }
+
+    def "Exception test multiple parameter2 with datatable"() {
+        expect:
+        new Polygon(sides).numberOfSides == sides
+
+        where:
+        sides << [3,4,5,7,9,100]
+    }
+
+    def "should use data tables for calculating max"(){
+        expect:
+        Math.max(a ,b) == max
+
+        where:
+        a  | b  || max
+        1  | 10 || 10
+        7  | 4  || 5
+        20 | 0  || 20
+
+
+
 
     }
 }
