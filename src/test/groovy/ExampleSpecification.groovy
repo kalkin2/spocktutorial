@@ -6,9 +6,11 @@ import spock.lang.Subject
 
 
 class ExampleSpecification extends Specification{
+    //
 
 
-    def "shoud be s simple assertion"() {
+
+    def "should be s simple assertion"() {
         expect:
         1==1
     }
